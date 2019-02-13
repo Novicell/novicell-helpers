@@ -1,6 +1,6 @@
 'use strict';
 
-const buttonsWithLink = function() {
+export const buttonsWithLink = function() {
     const buttonsWithLink = document.querySelectorAll('a > .button');
     if (!buttonsWithLink || buttonsWithLink.length <= 0) {
         return;
@@ -14,7 +14,7 @@ const buttonsWithLink = function() {
     }
 };
 
-const findAncestor = function(el, cls) {
+export const findAncestor = function(el, cls) {
     if (el == null) {
         return;
     }
@@ -23,7 +23,7 @@ const findAncestor = function(el, cls) {
     }
 };
 
-const toggleClass = function(el, className) {
+export const toggleClass = function(el, className) {
     if (el.classList) {
         el.classList.toggle(className);
     } else {
@@ -40,14 +40,14 @@ const toggleClass = function(el, className) {
     }
 };
 
-const hasClass = function(el, className) {
+export const hasClass = function(el, className) {
     if (el.classList.contains(className)) {
         return true;
     }
     return false;
 };
 
-const isVisible = function(element) {
+export const isVisible = function(element) {
     const rect = element.getBoundingClientRect();
     const html = document.documentElement;
 
@@ -59,7 +59,7 @@ const isVisible = function(element) {
     );
 };
 
-const accordionAnimate = function(element, listToOpen = '.js-accordion') {
+export const accordionAnimate = function(element, listToOpen = '.js-accordion') {
     var parentItem = element.parentElement;
     parentItem.classList.toggle('accordion--active');
 
@@ -85,12 +85,3 @@ const accordionAnimate = function(element, listToOpen = '.js-accordion') {
         parentItem.style.height = newHeight + 'px';
     }
 }
-
-export {
-    buttonsWithLink,
-    findAncestor,
-    toggleClass,
-    hasClass,
-    isVisible,
-    accordionAnimate
-};
