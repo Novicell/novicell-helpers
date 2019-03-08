@@ -1,8 +1,8 @@
 {
   "name": "novicell-helpers",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Set of reusable functions",
-  "main": "dist/app.bundle.js",
+  "main": "dist/helpers.esm.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
